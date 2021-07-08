@@ -1,0 +1,180 @@
+@import "base-styles.css";
+
+/*main text */
+
+main {
+    /*grid position stars on row 2 and column 3 and finishes on row 7 and column 7*/
+    grid-area: 2 / 3 / span 5 /span 4;
+
+    border-radius: 5px;
+
+    padding: 3rem;
+    
+
+    /*makes element a flex container */
+    display: flex;
+    /*displays all child elements in a column with space between them */
+    flex-direction: column;
+    justify-content: space-between;
+    
+    background-color: #222;
+}
+main h1 {
+    text-align: center;
+}
+
+/*welcome message */
+article {
+    border: 1px solid white;
+    padding: 4%;
+    font-size: 1vw;
+}
+
+/*featured stories */
+.featured {
+    padding-top: 2rem;
+    border-radius: 10px;
+    background-color:rgb(10, 10, 10);
+    height: 70%;
+
+ /*makes element with class featured a */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.featured h1 {
+    color:  white;
+}
+
+.story-links-wrapper {
+    border-radius: 10px ;
+    background-color:rgb(10, 10, 10);;
+    height: 90%;
+
+    /*makes .story-links-wrapper a grid  with 2 rows and 2 columns all the same size (splits into quaters)*/
+    display: grid;
+    place-items: start; /*places items one after the other starting at begining of grid */
+    grid-gap: 1.5rem; /*gap of 1.5 rem between grid elements */
+    grid-template: 1fr 1fr / 1fr 1fr;
+    
+
+}
+
+.featured li {
+    padding: 0.5rem 0.5rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    justify-self: center; /*uses grid function justify-self to center item within space in the grid*/
+    width: 90%;
+   
+    background-color:  rgb(65, 1, 1);
+}
+
+.featured li .text-on-hover {
+    padding-top: 2rem;
+    width: 90%;
+    height: 70%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.featured li div img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+
+.featured li div p  {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+
+    padding: 0;
+    margin: 0;
+    height: 87%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+.text-on-hover:hover p {
+        display: block;
+}
+
+/* aside */
+aside {
+    grid-area: 2 / 7 / span 3 / span 2;
+    justify-self: center;
+
+    padding: 2rem 0;
+    margin-right: 3rem;
+    text-align: center;
+    background-color:rgb(10, 10, 10); 
+    
+    border-radius: 10px;
+
+}
+
+aside .heading-border {
+    border: 1px solid white;
+}
+aside .form-border p {
+    margin: 1rem 2rem;
+}
+
+form {
+    background-color: #222;
+    width: 90%;
+    
+    margin: 0 auto;
+    padding: 0.5rem 0;
+
+}
+
+input {
+    width: 40%;
+    height: 3rem;
+    text-align: center;
+    display: block;
+    margin: 3.5rem auto;
+    border-radius: 2rem;
+}
+
+button {
+    display: block;
+    margin: 2rem auto;
+    height: 3rem;
+    width: 30%;
+    border-radius: 1rem;
+    background-color: #222;
+    color: white;
+  }
+
+
+
+
+footer {
+    padding-top: 2rem;
+    background-color:  rgb(10, 10, 10);
+    text-align: center;
+    /*spans the bottom row and whole width of grid */
+    grid-row: 7 / span 1;
+    grid-column: 1 / span 8
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .story-links-wrapper {
+        display: flex;
+    }
+    .grid-container {
+        grid-template-rows: 100px repeat(12, 200px) 100px;
+    }
+    aside {
+        grid-row: 10 / span 3;
+        grid-column: 1 / span 9;
+    }
+}
+

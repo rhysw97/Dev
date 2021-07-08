@@ -1,0 +1,29 @@
+@import "base-styles.css";
+
+
+
+main {
+   
+    font-size: large;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+    grid-area: 3 / 2 / span 4 /span 6;
+  
+    background-color: rgb(24, 23, 23);
+}
+
+main p {
+    padding: 1rem;
+ }
+
+ .story-border {
+    padding: 2rem 4rem;
+    overflow: scroll;
+    margin: 1rem;
+    border: 1px solid white;
+
+    background-color:rgb(34, 34, 34);
+ }

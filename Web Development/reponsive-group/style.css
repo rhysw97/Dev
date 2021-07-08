@@ -1,0 +1,8 @@
+body {
+    background-image: url(stairs.jpg);
+    
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: grayscale(100%);
+    background-repeat: no-repeat;
+}

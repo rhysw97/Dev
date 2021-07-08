@@ -1,0 +1,232 @@
+
+/*sets both the html and body to have no margins or padding. */
+
+html,
+body {
+    padding: 0;
+    margin:  0;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+/*background image */
+.bg {
+    /*sets width and height to take up entire body*/
+    width: 100%;
+    height: 100%;
+    /*sets the background image to a forest with a house and it covers the whole background and it is centered*/
+    background-image: url(../resources/forest-haunting.jpg);
+    background-size: cover;
+    background-position: center;
+} 
+
+header {
+    /*sets font size to be 6% of the view height */
+    font-size: 6vh;
+    font-family: 'Sevillana', cursive;
+    text-align: center; 
+    /*positions header left hand corner in center of webpage */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-80%); /* translates the header -50% horizontally and -80% vertically (adjusts what part of the element is in the center)*/ 
+    color: rgb(248, 206, 206);
+}
+
+header h1 {
+    font-size: 6vw;
+}
+
+span {
+    color: white;
+    opacity: 0;
+    /*takes the transition 1 second to smoothly change  */
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
+}
+  
+span.animate {
+    color: white;
+    opacity: 1;
+    /*adds a red text shadow to the spand elements within the story header  when animate class gets added*/
+    text-shadow: red 3px 3px 10px;
+}
+
+nav {
+    text-align: center;
+    /*positions in the center of the screen horrizontaly and 20% up from the bottom of the screen */
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%) translateY(-50%); /*used to center based on middle of nav bar by translating the shapes position by -50% on the shapes length */
+     
+    font-family: 'Sevillana', cursive;
+    color: white;
+}
+
+/*styles linke to look like a button with a red background  and text will break onto a new line if button is too small*/
+div a{
+    height: auto;
+    font-size: 1.5vw;
+    background-color: rgb(109, 1, 1);
+    padding: 2rem 3rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    word-wrap: break-word;
+    border: 2px solid white;
+}
+
+/*adds a inset box shadow to a tags within the div when a is being hovered */
+div a:hover {
+ 
+    box-shadow: inset 2px 2px 20px black;
+    background-color: rgba(105, 2, 2, 0.568);
+}
+/* sets mobile a's display to none so it won't display */
+.mobile a {
+     display: none;
+}
+
+/* sets both the center show and info to be in the middle of the screen horrizontally 10% away from the bottom */
+#show,
+#info {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: white;
+    font-family: 'Abhaya Libre', serif;
+
+}
+
+/*adds an down arrow after the element with the id show */
+#show::after {
+    content:'';
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: solid 5px white;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+}
+
+#show:hover {
+    color: rgb(255, 0, 0);
+  }
+
+#show:hover:after {
+    position: absolute;
+    top: 80%;
+    border-top-color: rgb(255, 0, 0);
+}
+
+
+  
+main {
+    display: none;
+}
+
+main p {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+#show,
+#info,
+#hide {
+    color: white;
+
+}
+
+#info,
+#hide {
+    display: none;
+}
+#hide {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*adds an up arrow before the element with the id hide */
+#hide::before {
+    content:'';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-bottom: solid 5px white;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+}
+
+#hide:hover {
+    color: rgb(255, 0, 0);
+}
+
+
+#hide:hover:before {
+    position: absolute;
+    top: 15%;
+    border-bottom-color: rgb(255, 0, 0);
+}
+
+.more-info a:active ~ .more-info p{
+    color: white;
+    display: block;
+
+}
+
+p {
+    font-size: 1vw;
+}
+
+
+/*displays the different nav button when screen is bellow 700px */
+@media only screen and (max-width: 1200px) {
+    /*sets mobile a to block so it displays */
+    .mobile a {
+        display: block;
+        padding: 1rem 2rem;
+        margin-bottom: 10%;
+        position: relative;
+        top: 3rem;
+    }
+
+    p {
+        font-size: 1.5vw;
+    }
+
+    /* sets desktop link to none so it isn't shown */
+    .desktop a {
+        display: none;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        position: absolute;
+        bottom: 40%;
+    }
+
+    p {
+        font-size: 5vw;
+    }
+}
+
+
