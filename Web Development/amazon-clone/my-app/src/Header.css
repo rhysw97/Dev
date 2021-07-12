@@ -1,0 +1,49 @@
+
+
+.Header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+.amazon-header{
+    padding: 1%;
+    grid-column: 1 / span 10;
+    grid-row: 1 / span 1;
+    height: 5%;
+    display: inline-flex;
+    background-color: #0f0f0f;
+    
+}
+
+.amazon-logo {
+
+   height: 90%;
+   
+    fill: white;
+    overflow: hidden;
+}
+form {
+    height: 100%;
+}
+.search-icon-wrapper {
+    height: 100%;
+    background-color: rgb(238, 163, 24);
+    
+}
+
+.search-icon {
+    height: 100%;
+    background-color: rgb(238, 163, 24);
+}
+.icon-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.shopping-basket {
+    
+    height: 75%;
+    fill: white;
+    
+}
