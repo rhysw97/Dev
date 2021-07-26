@@ -12,8 +12,8 @@ export default class Header extends Component {
           <form class="search-wrapper">
             <input type="text"></input>
             <div class="search-icon-wrapper">
-            <SearchIcon class="search-icon"/>
-          </div>
+              <SearchIcon class="search-icon"/>
+            </div>
           </form>
           <div class="icon-wrapper">
             <ShoppingBasketIcon class="shopping-basket"/>
